@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Bree+Serif|PT+Serif');
+
+
+
+nav {
+    list-style-type: none;
+    margin: 2rem;
+    padding: .5rem;
+    padding-left: 23rem;
+    padding-top: 3rem;
+    overflow: hidden;
+    background-color: white;
+}
+
+
+nav a {font-family: 'Bree Serif', serif;
+    color: lightgrey;
+    text-align: center;
+    padding: 16px 16px;
+    
+    text-decoration: none;}
+
+
+nav a:hover {
+    background-color: ghostwhite;
+}
+
+
+section {
+    padding-left: 15rem;
+    padding-right: 15rem;
+    padding-top: 3rem;
+}
+
+section p {font-family:'PT Serif', serif;}
+
+
+header h1 {font-family: 'Black Han Sans', sans-serif;}
+header {padding-left: 21rem;
+        padding-right: 21rem;
+        padding-top: 3rem;}
+
+
+footer {padding-left: 36rem;
+        padding-top: 9rem;}
