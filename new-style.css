@@ -1,3 +1,8 @@
+$backgroundcolor:white;
+$default-padding: 16px 16px;
+$defeault-padding-left:15rem;
+
+
 @import url("https://fonts.googleapis.com/css?family=Black+Han+Sans|Bree+Serif|PT+Serif");
 nav {
   list-style-type: none;
@@ -6,20 +11,20 @@ nav {
   padding-left: 23rem;
   padding-top: 3rem;
   overflow: hidden;
-  background-color: white; }
+  background-color: $backgroundcolor; }
 
 nav a {
   font-family: 'Bree Serif', serif;
   color: lightgrey;
   text-align: center;
-  padding: 16px 16px;
+  padding: $default-padding;
   text-decoration: none; }
 
 nav a:hover {
   background-color: ghostwhite; }
 
 section {
-  padding-left: 15rem;
+  padding-left: $defeault-padding-left;
   padding-right: 15rem;
   padding-top: 3rem; }
 
