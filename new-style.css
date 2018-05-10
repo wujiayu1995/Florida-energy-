@@ -1,32 +1,46 @@
-$backgroundcolor:white;
-$default-padding: 16px 16px;
-$defeault-padding-left:15rem;
-
-
 @import url("https://fonts.googleapis.com/css?family=Black+Han+Sans|Bree+Serif|PT+Serif");
-nav {
-  list-style-type: none;
-  margin: 2rem;
-  padding: .5rem;
-  padding-left: 23rem;
-  padding-top: 3rem;
-  overflow: hidden;
-  background-color: $backgroundcolor; }
+
+nav  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslategrey;
+}
+
+a {
+    float: left;
+    }
+
+a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ a:hover {
+    background-color: #111;
+}
 
 nav a {
   font-family: 'Bree Serif', serif;
   color: lightgrey;
   text-align: center;
-  padding: $default-padding;
-  text-decoration: none; }
+  }
 
-nav a:hover {
-  background-color: ghostwhite; }
+
+
+
 
 section {
-  padding-left: $defeault-padding-left;
+  padding-left: 15rem;
   padding-right: 15rem;
-  padding-top: 3rem; }
+  padding-top: 3rem; 
+  padding-bottom: 5rem;}
+
+p img {float: right;}
 
 section p {
   font-family: 'PT Serif', serif; }
@@ -34,13 +48,17 @@ section p {
 header h1 {
   font-family: 'Black Han Sans', sans-serif; }
 
-header {
+header h1 {
+  color: white;
   padding-left: 21rem;
   padding-right: 21rem;
   padding-top: 3rem; }
 
-footer {
-  padding-left: 36rem;
-  padding-top: 9rem; }
+header {background-image: url(https://www.teck.com/media/Operations-Wintering-Hills-Wind.jpg);}
 
-/*# sourceMappingURL=new-style.css.map */
+footer {
+  padding-left: 40rem;
+  padding-top: 3rem; 
+  background-color: beige;}
+
+/*# sourceMappingURL=new-style.scss */
