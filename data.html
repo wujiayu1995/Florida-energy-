@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Florida Energy Systems Consortium</title>
+
+
+   <meta charste= "utf-8">
+   <link rel="stylesheet" href="new-style.css">
+
+
+    <!-- facebook tags -->
+    <meta property= "og:title" content= "FESC homepage">
+    <meta property= "og: description" content= "Florida Energy Systems Consortium">
+    <meta property= "og:image" content="http://floridaenergy.ufl.edu/wp-content/themes/fesc/images/header_logo.png">
+    <meta property= "og:url" content="https://wujiayu1995.github.io/Florida-energy-/">
+    <meta property= "og:type" content="website">
+    
+    <!-- twitter tags -->
+    <meta name= "twitter:title" content= "FESC homepage">
+    <meta name= "twitter:description" content="Florida Energy Systems Consortium">
+    <meta name="twitter:image" content= "http://floridaenergy.ufl.edu/wp-content/themes/fesc/images/header_logo.png">
+    <meta name="twitter:url" content= "https://wujiayu1995.github.io/Florida-energy-/">
+    <meta name="twitter:card" content= "summary_large_image">
+    
+    
+   
+    <!-- Java for twitter !-->
+    
+    <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+    
+   <!-- Java for twitter !--> 
+    
+    
+    
+
+</head>
+
+<body>
+    
+    
+<!--facebook share to facebook button -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>    
+    
+    
+    
+  <header>
+    
+  <h1>FESC Bringing Energy Solutions to Florida, </h1>  
+  <h1>the Nation and the World</h1>
+  <br />
+   <br />
+      <br />
+    
+  </header>  
+    
+  
+    
+  <nav>
+<a href="index.html">Home</a> 
+<a href="education.html">Education</a> 
+<a href="outreach.html">Outreach</a> 
+<a href="data.html">Data</a> 
+<a href="https://www.google.com/s">Contact Us</a> 
+  </nav>  
+    
+    
+    
+   
+<section>
+     
+ 
+    
+    
+
+  <head1>
+    <p>Electricity total consumption & Renewable energy production Florid</p>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable);
+
+      function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Year');
+        data.addColumn('number', 'Billion Btu');
+        data.addColumn('boolean', ' Increased from last year');
+        data.addRows([
+          ['2015',  {v: 234192, f: '234192'}, true],
+          ['2014',   {v:226863,   f: '226863'},  false],
+          ['2013', {v: 229666, f: '229666'}, true],
+          ['2012',   {v: 220020,  f: '220020'},  true]
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+      }
+    </script>
+  </head1>
+    
+    
+ 
+    <head2>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Billion Btu'],
+          ['2016',  804283],
+          ['2015',  803865],
+          ['2014',  771379],
+          ['2013',  757189]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head2>
+  <body>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+  </body>
+    
+    
+    
+  <body>
+    <div id="table_div"></div>
+  </body>
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+    
+</section>    
+    
+
+
+<footer>
+   
+  <a class= "twitter-share-button"
+     href="https://twitter.com/intent/tweet?text=Have%20you%20ever%20heard%20abou%20FESC%3F%20https%3A%2F%2Fwujiayu1995.github.io%2FFlorida-energy-%2F">Tweet</a>
+  
+    
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwujiayu1995.github.io%2FFlorida-energy-%2F&layout=button&size=small&mobile_iframe=true&width=59&height=20&appId" width="59" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+       
+    
+</footer>    
+    
+    
+     
+    
+</body>
+
+</html>
