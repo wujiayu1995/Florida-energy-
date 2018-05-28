@@ -45,7 +45,7 @@
     
    <!-- Java for twitter !--> 
     
-    
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>     
     
 
 </head>
@@ -166,7 +166,19 @@
     
     
     
-    
+  <form v-on:submit="usersurvey()" v-on:submit.prevent>
+        Location:
+        <input type="text" id="place">
+        Age:
+        <input type="text" id="Age">
+        School:
+        <input type="text" id="weight">
+       
+        
+
+        <input type="submit">
+      </form>
+       
     
     
 
@@ -189,7 +201,7 @@
     
 </footer>    
     
-    
+  <script src="vue.js"></script>    
      
     
 </body>
