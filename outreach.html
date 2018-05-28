@@ -85,10 +85,8 @@
 <a href="education.html">Education</a> 
 <a href="outreach.html">Outreach</a> 
 <a href="data.html">Data</a> 
-<a href="https://www.google.com/s">Contact Us</a> 
-  </nav>   
-      
-    
+<a href="https://www.google.com">Contact Us</a> 
+  </nav>  
     
     
    
@@ -109,7 +107,19 @@ Helpful Links
 Heating Fuel Comparison Calculator
 
 ACEEE News Release – Energy Efficiency Tax Incentives: Changes in Store for 2011</p> 
-    
+  <form v-on:submit="usersurvey()" v-on:submit.prevent>
+        Location:
+        <input type="text" id="place">
+        Age:
+        <input type="text" id="Age">
+        School:
+        <input type="text" id="weight">
+       
+        
+
+        <input type="submit">
+      </form>
+       
     
 </section>    
     
@@ -126,7 +136,7 @@ ACEEE News Release – Energy Efficiency Tax Incentives: Changes in Store for 20
     
 </footer>    
     
-    
+<script src="vue.js"></script>      
      
     
 </body>
