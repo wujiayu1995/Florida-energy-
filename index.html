@@ -46,11 +46,14 @@
    <!-- Java for twitter !--> 
     
     
-    
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
 
 </head>
 
 <body>
+
+    
+<div id="app"> 
     
     
 <!--facebook share to facebook button -->
@@ -69,31 +72,45 @@
   <header>
     
   <h1>FESC Bringing Energy Solutions to Florida, </h1>  
-  <h1>the Nation and the World</h1>
+  <h1>the Nation and the World </h1>
   <br />
    <br />
       <br />
     
   </header>  
+   
+    
+    
+    
+
     
   
+    
  <nav>
 <a href="index.html">Home</a> 
 <a href="education.html">Education</a> 
 <a href="outreach.html">Outreach</a> 
 <a href="data.html">Data</a> 
-<a href="https://www.google.com/s">Contact Us</a> 
-  </nav> 
+<a href="https://www.google.com">Contact Us</a> 
+  </nav>   
+    
+    
+    
 
     
     
-   
  <section>
+       
      
-    
+   <h3>Introduction</h3>   
+     
+     
+     
+     
+     
    <p>
 
-<img src="https://www.mckinsey.com/~/media/McKinsey/Business%20Functions/Sustainability%20and%20Resource%20Productivity/Our%20Insights/The%20new%20economics%20of%20energy%20storage/Insights-MoSRP-The-new-economics-of-energy-storage-1536x1536-100_Standard.ashx?mw=1536&car=72:35&cq=50&tco=100" alt="index" width= "500px">
+<img src="https://www.mckinsey.com/~/media/McKinsey/Business%20Functions/Sustainability%20and%20Resource%20Productivity/Our%20Insights/The%20new%20economics%20of%20energy%20storage/Insights-MoSRP-The-new-economics-of-energy-storage-1536x1536-100_Standard.ashx?mw=1536&car=72:35&cq=50&tco=100" alt="introimageme" width= "500px">
 
 FESC Bringing Energy Solutions to Florida,
 the Nation and the World
@@ -111,7 +128,24 @@ Through collaborative research and development across the State University Syste
 
 (d) Develop education and outreach programs to prepare a qualified energy workforce and informed public.</p> 
     
+
     
+<form v-on:submit="usersurvey()" v-on:submit.prevent>
+        Location:
+        <input type="text" id="place">
+        Age:
+        <input type="text" id="Age">
+        School:
+        <input type="text" id="weight">
+       
+        
+
+        <input type="submit">
+      </form>
+     
+     
+     
+     
 </section>    
     
 
@@ -129,7 +163,9 @@ Through collaborative research and development across the State University Syste
 </footer>    
     
     
-     
+ </div>  
+    
+<script src="script.js"></script>    
     
 </body>
 
