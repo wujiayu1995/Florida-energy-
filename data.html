@@ -25,7 +25,9 @@
     
    
     <!-- Java for twitter !-->
-    
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <div id="chart_div"></div>
+      
     <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
@@ -41,9 +43,144 @@
   };
 
   return t;
-}(document, "script", "twitter-wjs"));</script>
+}(document, "script", "twitter-wjs"));
     
-   <!-- Java for twitter !--> 
+    
+    // API CHART
+    
+    </script>
+    <script>
+    
+ // FL Total Consumption   
+            
+google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'year');
+      data.addColumn('number', 'BTus');
+
+      data.addRows([
+        [1960,  809836],   [1970,  1577497],  [1980,  2512464],   [1990,  3280859],  [2000,  4046761],  [2010,  4277137]
+      ]);
+
+      var options = {
+        hAxis: {
+          title: 'Time'
+        },
+        vAxis: {
+          title: 'BTus'
+        }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+   
+        function getData(){
+        // Create a new request object
+      let request = new XMLHttpRequest()
+      // TODO: URL to contact goes here
+      let requestUrl = "http://api.eia.gov/series/?api_key=a15410da392563a1d40db8109551a426&series_id=SEDS.TETCB.FL.A"
+      // Open a connection
+      request.open('GET', requestUrl, true)
+      // Callback for when the request completes
+      request.onload = function(){
+        console.log("response from server is: ", JSON.parse(request.response))
+      }
+      // Callback for when there's an error
+      request.error = function(err){
+        console.log("error is: ", err)
+      }
+      // Send the request to the specified URL
+      request.send()
+    }
+        getData()
+    
+    </script>
+  //  FL Renewable Energy Production
+        
+     
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>   
+    <script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+
+      google.charts.setOnLoadCallback(drawChart);
+
+ 
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+
+          ['Year', 'Billion BTU'],
+
+          ['1960',  809836],
+
+          ['1970',  1577497],
+
+          ['1980',  2512464],
+
+          ['1990',  3280859],
+
+          ['2000',  4046761],
+
+          ['2010',  4277137]
+
+        ]);
+
+        var options = {
+
+          title: 'Total energy consumption, Florida',
+
+          curveType: 'function',
+
+          legend: { position: 'bottom' }
+
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+ 
+
+        chart.draw(data, options);
+
+      }
+
+ 
+   
+        function getData(){
+        // Create a new request object
+      let request = new XMLHttpRequest()
+      // TODO: URL to contact goes here
+      let requestUrl = "https://api.eia.gov/series/?api_key=a15410da392563a1d40db8109551a426&series_id=SEDS.REPRB.FL.A"
+      // Open a connection
+      request.open('GET', requestUrl, true)
+      // Callback for when the request completes
+      request.onload = function(){
+        console.log("response from server is: ", JSON.parse(request.response))
+      }
+      // Callback for when there's an error
+      request.error = function(err){
+        console.log("error is: ", err)
+      }
+      // Send the request to the specified URL
+      request.send()
+    }
+        getData()
+    
+        
+        
+    
+    
+    
+    
+    </script>
+
+ 
     
  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>     
     
@@ -73,6 +210,7 @@
   <br />
    <br />
       <br />
+      
     
   </header>  
     
@@ -87,110 +225,11 @@
   </nav>  
     
     
-    
-   
-<section>
-     
+
  
-    
-    
-
-  <head1>
-    <p>Electricity total consumption & Renewable energy production Florid</p>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['table']});
-      google.charts.setOnLoadCallback(drawTable);
-
-      function drawTable() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Year');
-        data.addColumn('number', 'Billion Btu');
-        data.addColumn('boolean', ' Increased from last year');
-        data.addRows([
-          ['2015',  {v: 234192, f: '234192'}, true],
-          ['2014',   {v:226863,   f: '226863'},  false],
-          ['2013', {v: 229666, f: '229666'}, true],
-          ['2012',   {v: 220020,  f: '220020'},  true]
-        ]);
-
-        var table = new google.visualization.Table(document.getElementById('table_div'));
-
-        table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
-      }
-    </script>
-  </head1>
-    
-    
- 
-    <head2>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Billion Btu'],
-          ['2016',  804283],
-          ['2015',  803865],
-          ['2014',  771379],
-          ['2013',  757189]
-        ]);
-
-        var options = {
-          title: 'Company Performance',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }
-    </script>
-  </head2>
-  <body>
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>
-  </body>
-    
-    
-    
-  <body>
-    <div id="table_div"></div>
-  </body>
-   
-    
-    
-    
-    
-    
-    
-  <form v-on:submit="usersurvey()" v-on:submit.prevent>
-        Location:
-        <input type="text" id="place">
-        Age:
-        <input type="text" id="Age">
-        School:
-        <input type="text" id="weight">
-       
-        
-
-        <input type="submit">
-      </form>
-       
-    
-    
-
-
-
-    
-</section>    
-    
-
 
 <footer>
-   
+    <div id="chart_div"></div>
   <a class= "twitter-share-button"
      href="https://twitter.com/intent/tweet?text=Have%20you%20ever%20heard%20abou%20FESC%3F%20https%3A%2F%2Fwujiayu1995.github.io%2FFlorida-energy-%2F">Tweet</a>
   
@@ -201,7 +240,7 @@
     
 </footer>    
     
-  <script src="vue.js"></script>    
+   
      
     
 </body>
